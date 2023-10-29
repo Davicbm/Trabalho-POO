@@ -1,4 +1,5 @@
 import javax.swing.JPanel;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -61,13 +62,16 @@ public class PainelJogo extends JPanel implements Runnable{
     }
 
     public void update(){
-        if(tecla.cimaPress == true){
+        if (tecla.cimaPress) {
             player1Y -= playerVel;
-        } else if (tecla.baixoPress == true){
+        }
+        else if (tecla.baixoPress) {
             player1Y += playerVel;
-        } else if (tecla.esqPress == true){
+        }
+        else if (tecla.esqPress) {
             player1X -= playerVel;
-        } else if (tecla.dirPress == true){
+        }
+        else if (tecla.dirPress) {
             player1X += playerVel;
         }
     }
